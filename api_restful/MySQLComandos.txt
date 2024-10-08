@@ -1,0 +1,13 @@
+CREATE DATABASE devs2blu;
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'userpass';
+SELECT * FROM mysql.user;
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE TABLE usuario (
+	id INT AUTO_INCREMENT,
+	nome VARCHAR(100),
+	email VARCHAR(100),
+	idade INT,
+	PRIMARY KEY (id)
+);
